@@ -299,7 +299,7 @@ function seedPlants() {
 
 function loadData() {
   try {
-    var sp = localStorage.getItem('troys_garden_v3');
+    var sp = localStorage.getItem('troys_garden_v4');
     if (sp) plants = JSON.parse(sp); else { plants = seedPlants(); savePlants(); }
   } catch(e) { plants = seedPlants(); }
   try {
@@ -309,7 +309,7 @@ function loadData() {
 }
 
 function savePlants() {
-  try { localStorage.setItem('troys_garden_v3', JSON.stringify(plants)); }
+  try { localStorage.setItem('troys_garden_v4', JSON.stringify(plants)); }
   catch(e) { toast('Storage full \u2014 could not save plant data'); }
 }
 
